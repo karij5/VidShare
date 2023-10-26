@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="400.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vidshare.vidshare.SignupController">
+    <children>
+        <AnchorPane layoutY="28.0" prefHeight="372.0" prefWidth="600.0">
+            <children>
+                <Label layoutX="220.0" layoutY="33.0" text="VidShare" textFill="#2a1fc7">
+                    <font>
+                        <Font name="Eras Demi ITC" size="39.0" />
+                    </font>
+                </Label>
+                <Label fx:id="emailSignUpText" layoutX="242.0" layoutY="109.0" text="Enter Email Address:">
+                    <font>
+                        <Font name="Corbel" size="14.0" />
+                    </font>
+                </Label>
+                <Label fx:id="passwordSignUpText" layoutX="255.0" layoutY="186.0" text="Create Password:">
+                    <font>
+                        <Font name="Corbel" size="14.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="emailSignUpField" layoutX="231.0" layoutY="135.0" />
+                <TextField fx:id="passwordSignUpField" layoutX="231.0" layoutY="215.0" />
+                <Button fx:id="createAccountButton" layoutX="253.0" layoutY="265.0" mnemonicParsing="false" onAction="#onCreateAccountButton" text="Create Account" />
+            <Text layoutX="281.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" to return to sign in." />
+            <Hyperlink fx:id="returnToSignInHyperLink" layoutX="225.0" layoutY="309.0" onAction="#onReturnToSignInHyperlink" text="Click here" />
+            </children>
+        </AnchorPane>
+        <MenuBar layoutY="2.0" prefHeight="21.0" prefWidth="600.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Legal">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Terms &amp; Conditions">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </children>
+</AnchorPane>
