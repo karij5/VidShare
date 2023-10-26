@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vidshare.vidshare.LoginController">
+   <children>
+      <AnchorPane layoutY="28.0" prefHeight="372.0" prefWidth="600.0">
+         <children>
+            <Label layoutX="220.0" layoutY="33.0" text="VidShare" textFill="#2a1fc7">
+               <font>
+                  <Font name="Eras Demi ITC" size="39.0" />
+               </font>
+            </Label>
+            <Label fx:id="emailText" layoutX="256.0" layoutY="117.0" text="Email Address:">
+               <font>
+                  <Font name="Corbel" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="passwordText" layoutX="270.0" layoutY="197.0" text="Password:">
+               <font>
+                  <Font name="Corbel" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="emailField" layoutX="231.0" layoutY="135.0" />
+            <TextField fx:id="passwordField" layoutX="231.0" layoutY="215.0" />
+            <Button fx:id="signInButton" layoutX="276.0" layoutY="263.0" mnemonicParsing="false" onAction="#onSignInButtonClick" text="Sign In" />
+            <Button fx:id="signUpButton" layoutX="203.0" layoutY="313.0" mnemonicParsing="false" onAction="#onSignUpButtonClick" text="Not a member? Register Here!" />
+         </children>
+      </AnchorPane>
+      <MenuBar layoutY="2.0" prefHeight="21.0" prefWidth="600.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Legal">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Terms &amp; Conditions">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>
