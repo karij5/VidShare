@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vidshare.vidshare.ProfileMainPageController">
+    <children>
+        <AnchorPane layoutY="28.0" prefHeight="372.0" prefWidth="600.0">
+            <children>
+                <Label layoutX="217.0" layoutY="14.0" text="VidShare" textFill="#2a1fc7">
+                    <font>
+                        <Font name="Eras Demi ITC" size="39.0" />
+                    </font>
+                </Label>
+                <Button fx:id="EditProfileButton" layoutX="264.0" layoutY="97.0" mnemonicParsing="false" onAction="#onEditProfileButton" text="Edit Profile" />
+            <Button fx:id="FollowingButton" layoutX="265.0" layoutY="173.0" mnemonicParsing="false" onAction="#onFollowingButton" text="Following" />
+            <Button fx:id="FollowersButton" layoutX="265.0" layoutY="212.0" mnemonicParsing="false" onAction="#onFollowersButton" prefHeight="25.0" prefWidth="68.0" text="Followers" />
+            <Button fx:id="UploadedVideosButton" layoutX="248.0" layoutY="134.0" mnemonicParsing="false" onAction="#onUploadedVideosButton" text="Uploaded Videos" />
+            </children>
+        </AnchorPane>
+        <MenuBar layoutY="2.0" prefHeight="21.0" prefWidth="600.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Legal">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Terms &amp; Conditions">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </children>
+</AnchorPane>
