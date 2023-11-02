@@ -1,47 +1,38 @@
 package com.vidshare.vidshare;
 
-import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
+import javafx.scene.control.MenuBar;
+import javafx.scene.control.MenuItem;
 import javafx.stage.Stage;
-
 import java.io.IOException;
 
-public class ProfileMainPageController {
-    @FXML
-    private Button EditProfileButton;
-    @FXML
-    private Button uploadedVideosButton;
-    @FXML
-    private Button followingButton;
-    @FXML
-    private Button followersButton;
+public class ExplorePageController {
 
     @FXML
-    public void onEditProfileButton(Event event) throws IOException {
+    MenuBar menuBar;
+
+    @FXML
+    MenuItem menuItem;
+
+    @FXML
+    protected void logOut (Event event) throws IOException {
+
         Node node=(Node) event.getSource();
         Stage stage=(Stage) node.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("editpage-view.fxml"));/* Exception */
+        Parent root = FXMLLoader.load(getClass().getResource("signin-view.fxml"));/* Exception */
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+
     }
 
-    public void onFollowingButton(Event event) throws IOException {
-        Node node=(Node) event.getSource();
-        Stage stage=(Stage) node.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("followinglist-view.fxml"));/* Exception */
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
-    }
-
-    public void onFollowersButton(Event event) throws IOException {
+    @FXML
+    protected void goToFollowers (Event event) throws IOException {
         Node node=(Node) event.getSource();
         Stage stage=(Stage) node.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("followerslist-view.fxml"));/* Exception */
@@ -50,7 +41,25 @@ public class ProfileMainPageController {
         stage.show();
     }
 
-    public void onUploadedVideosButton(Event event) throws IOException {
-       //Not yet made as I was unsure on what the layout of the videos would be
+    @FXML
+    protected void goToFollowing (Event event) throws IOException {
+        Node node=(Node) event.getSource();
+        Stage stage=(Stage) node.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("followinglist-view.fxml"));/* Exception */
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
+
+    @FXML
+    protected void goToCredentials (Event event) throws IOException {
+        Node node=(Node) event.getSource();
+        Stage stage=(Stage) node.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("editpage-view.fxml"));/* Exception */
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
 }

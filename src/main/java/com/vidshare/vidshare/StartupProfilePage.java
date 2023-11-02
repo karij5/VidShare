@@ -12,7 +12,7 @@ import java.io.IOException;
 public class StartupProfilePage extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(StartupApplication.class.getResource("Profile Main Page updated.fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(StartupApplication.class.getResource("profilemainpage-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 600, 500);
         stage.setTitle("VidShare Profile Page");
         stage.setResizable(false);

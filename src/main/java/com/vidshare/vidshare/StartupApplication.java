@@ -16,6 +16,7 @@ public class StartupApplication extends Application {
         stage.setResizable(false);
         stage.setScene(scene);
         stage.show();
+        //add
     }
 
     public static void main(String[] args) {
