@@ -10,21 +10,21 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vidshare.vidshare.ExplorePageController">
     <children>
         <MediaView fx:id="mediaView" fitHeight="300.0" fitWidth="350.0" layoutX="125.0" layoutY="64.0" />
-        <MenuBar layoutY="2.0" prefHeight="26.0" prefWidth="600.0">
+        <MenuBar fx:id="menuBar" layoutY="2.0" prefHeight="26.0" prefWidth="600.0">
             <menus>
                 <Menu mnemonicParsing="false" text="Legal">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="Copyright" />
+                        <MenuItem fx:id="copyrightButton" mnemonicParsing="false" onAction="#goToCopyright" text="Copyright" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Terms of Service">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="ToS" />
+                        <MenuItem fx:id="tosButton" mnemonicParsing="false" onAction="#goToToS" text="Terms of Service" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="Help">
                     <items>
-                        <MenuItem mnemonicParsing="false" text="How To Use" />
+                        <MenuItem fx:id="howToUseButton" mnemonicParsing="false" onAction="#goToHowToUse" text="How To Use" />
                     </items>
                 </Menu>
                 <Menu mnemonicParsing="false" text="My Profile">

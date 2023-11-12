@@ -1,5 +1,6 @@
 package com.vidshare.vidshare;
 
+import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -20,10 +21,8 @@ public class ExplorePageController {
     MenuItem menuItem;
 
     @FXML
-    protected void logOut (Event event) throws IOException {
-
-        Node node=(Node) event.getSource();
-        Stage stage=(Stage) node.getScene().getWindow();
+    protected void logOut (ActionEvent event) throws IOException {
+        Stage stage = (Stage) menuBar.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("signin-view.fxml"));/* Exception */
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -32,9 +31,8 @@ public class ExplorePageController {
     }
 
     @FXML
-    protected void goToFollowers (Event event) throws IOException {
-        Node node=(Node) event.getSource();
-        Stage stage=(Stage) node.getScene().getWindow();
+    protected void goToFollowers (ActionEvent event) throws IOException {
+        Stage stage = (Stage) menuBar.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("followerslist-view.fxml"));/* Exception */
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -42,9 +40,8 @@ public class ExplorePageController {
     }
 
     @FXML
-    protected void goToFollowing (Event event) throws IOException {
-        Node node=(Node) event.getSource();
-        Stage stage=(Stage) node.getScene().getWindow();
+    protected void goToFollowing (ActionEvent event) throws IOException {
+        Stage stage = (Stage) menuBar.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("followinglist-view.fxml"));/* Exception */
         Scene scene = new Scene(root);
         stage.setScene(scene);
@@ -52,10 +49,35 @@ public class ExplorePageController {
     }
 
     @FXML
-    protected void goToCredentials (Event event) throws IOException {
-        Node node=(Node) event.getSource();
-        Stage stage=(Stage) node.getScene().getWindow();
+    protected void goToCredentials (ActionEvent event) throws IOException {
+        Stage stage = (Stage) menuBar.getScene().getWindow();
         Parent root = FXMLLoader.load(getClass().getResource("editpage-view.fxml"));/* Exception */
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    protected void goToCopyright (ActionEvent event) throws IOException {
+        Stage stage = (Stage) menuBar.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("Copyright.fxml"));/* Exception */
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+    @FXML
+    protected void goToHowToUse (ActionEvent event) throws IOException {
+        Stage stage = (Stage) menuBar.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("HowToUse.fxml"));/* Exception */
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    @FXML
+    protected void goToToS (ActionEvent event) throws IOException {
+        Stage stage = (Stage) menuBar.getScene().getWindow();
+        Parent root = FXMLLoader.load(getClass().getResource("Terms Of Service.fxml"));/* Exception */
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

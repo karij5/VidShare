@@ -34,7 +34,7 @@ public class EditProfilePageController{
     public void onBackButton(Event event) throws IOException{
         Node node=(Node) event.getSource();
         Stage stage=(Stage) node.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("mainprofilepage-view.fxml"));/* Exception */
+        Parent root = FXMLLoader.load(getClass().getResource("explorepage-view.fxml"));/* Exception */
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();

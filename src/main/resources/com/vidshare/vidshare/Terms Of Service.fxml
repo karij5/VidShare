@@ -5,7 +5,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="400.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vidshare.vidshare.ProfileMainPageController">
+<AnchorPane prefHeight="400.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vidshare.vidshare.HowToUseController">
     <children>
         <AnchorPane layoutY="28.0" prefHeight="372.0" prefWidth="600.0">
             <children>
@@ -14,10 +14,10 @@
                         <Font name="Eras Demi ITC" size="39.0" />
                     </font>
                 </Label>
-                <Button fx:id="EditProfileButton" layoutX="264.0" layoutY="97.0" mnemonicParsing="false" onAction="#onEditProfileButton" text="Edit Profile" />
-            <Button fx:id="FollowingButton" layoutX="265.0" layoutY="173.0" mnemonicParsing="false" onAction="#onFollowingButton" text="Following" />
-            <Button fx:id="FollowersButton" layoutX="265.0" layoutY="212.0" mnemonicParsing="false" onAction="#onFollowersButton" prefHeight="25.0" prefWidth="68.0" text="Followers" />
-            <Button fx:id="UploadedVideosButton" layoutX="248.0" layoutY="134.0" mnemonicParsing="false" onAction="#onUploadedVideosButton" text="Uploaded Videos" />
+            <Accordion layoutX="15.0" layoutY="72.0" />
+            <Button fx:id="BackButton" layoutX="281.0" layoutY="326.0" mnemonicParsing="false" onAction="#onBackButton" text="Back" />
+            <Text layoutX="255.0" layoutY="76.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Terms Of Service" wrappingWidth="92.88671875" />
+            <Text layoutX="154.0" layoutY="108.0" strokeType="OUTSIDE" strokeWidth="0.0" text="By using VidShare you agree to the following:&#10;1. Account&#10;&#9;By creating a VidShare account, the user agrees&#10;&#9;to follow the ToS as outline here.&#10;2. Videos&#10;&#9;Videos uploaded by users may be subject to &#10;&#9;review if the videos are deemed inappropriate.&#10;&#9;Users may not upload videos that include and&#10;&#9;are not limited to gore, nudity, sexual content,&#10;&#9;and/or personal information.&#10;3. Account Termination&#10;&#9;If a user frequently breaks the ToS, their&#10;&#9;account may be suject to termination.&#10;" wrappingWidth="296.0" />
             </children>
         </AnchorPane>
         <MenuBar layoutY="2.0" prefHeight="21.0" prefWidth="600.0">

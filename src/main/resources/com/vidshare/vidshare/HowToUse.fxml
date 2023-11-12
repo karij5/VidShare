@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vidshare.vidshare.HowToUseController">
+    <children>
+        <AnchorPane layoutY="28.0" prefHeight="372.0" prefWidth="600.0">
+            <children>
+                <Label layoutX="217.0" layoutY="14.0" text="VidShare" textFill="#2a1fc7">
+                    <font>
+                        <Font name="Eras Demi ITC" size="39.0" />
+                    </font>
+                </Label>
+            <Accordion layoutX="15.0" layoutY="72.0" />
+            <Button fx:id="BackButton" layoutX="281.0" layoutY="306.0" mnemonicParsing="false" onAction="#onBackButton" text="Back" />
+            <Text layoutX="268.0" layoutY="145.0" strokeType="OUTSIDE" strokeWidth="0.0" text="How to use:" wrappingWidth="63.88671875" />
+            <Text layoutX="182.0" layoutY="175.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1. Like or dislike a video to move on&#10;2 Videos are random and will not be affected by a user's input" textAlignment="CENTER" wrappingWidth="239.0" />
+            </children>
+        </AnchorPane>
+        <MenuBar layoutY="2.0" prefHeight="21.0" prefWidth="600.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Help">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Close" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Legal">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="Delete" />
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Terms &amp; Conditions">
+                    <items>
+                        <MenuItem mnemonicParsing="false" text="About" />
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+    </children>
+</AnchorPane>

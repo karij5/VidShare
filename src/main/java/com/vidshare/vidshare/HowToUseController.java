@@ -10,7 +10,7 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class FollowersListPageController {
+public class HowToUseController {
     public void onBackButton(Event event) throws IOException {
         Node node=(Node) event.getSource();
         Stage stage=(Stage) node.getScene().getWindow();
