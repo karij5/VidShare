@@ -11,7 +11,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="400.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vidshare.vidshare.SignupController">
+<AnchorPane prefHeight="400.0" prefWidth="534.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.vidshare.vidshare.SignupController">
     <children>
         <AnchorPane layoutY="28.0" prefHeight="372.0" prefWidth="600.0">
             <children>
@@ -30,8 +30,8 @@
                         <Font name="Corbel" size="14.0" />
                     </font>
                 </Label>
-                <TextField fx:id="emailSignUpField" layoutX="231.0" layoutY="135.0" />
-                <TextField fx:id="passwordSignUpField" layoutX="231.0" layoutY="215.0" />
+                <TextField fx:id="usremail" layoutX="228.0" layoutY="142.0" />
+                <TextField fx:id="usrpassword" layoutX="231.0" layoutY="215.0" />
                 <Button fx:id="createAccountButton" layoutX="253.0" layoutY="265.0" mnemonicParsing="false" onAction="#onCreateAccountButton" text="Create Account" />
             <Text layoutX="281.0" layoutY="326.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" to return to sign in." />
             <Hyperlink fx:id="returnToSignInHyperLink" layoutX="225.0" layoutY="309.0" onAction="#onReturnToSignInHyperlink" text="Click here" />
