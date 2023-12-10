@@ -16,9 +16,12 @@ public class ExplorePageController {
 
     @FXML
     MenuBar menuBar;
-
     @FXML
     MenuItem menuItem;
+    private Firebase fbase;
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
     @FXML
     protected void logOut (ActionEvent event) throws IOException {
@@ -81,6 +84,10 @@ public class ExplorePageController {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    public void setInstance(Firebase fbase, Stage stage){
+        this.fbase=fbase;
+        this.stage=stage;
     }
 
 

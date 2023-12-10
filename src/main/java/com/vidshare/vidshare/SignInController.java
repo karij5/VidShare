@@ -1,5 +1,7 @@
 package com.vidshare.vidshare;
 
+import com.google.firebase.auth.FirebaseAuthException;
+import com.google.firebase.auth.FirebaseToken;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
 import javafx.fxml.FXML;
@@ -27,26 +29,47 @@ public class SignInController {
     private Button signInButton;
     @FXML
     private Button signUpButton;
+    private Firebase fbase;
+    private Stage stage;
+    private Scene scene;
+    private Parent root;
 
 
     @FXML
-    protected void onSignInButtonClick(Event event) throws IOException {
-        Node node=(Node) event.getSource();
-        Stage stage=(Stage) node.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("explorepage-view.fxml"));/* Exception */
-        Scene scene = new Scene(root);
-        stage.setScene(scene);
-        stage.show();
+    protected void onSignInButtonClick(Event event) throws IOException, FirebaseAuthException {
+        try {
+            String idToken = fbase.getUserToken(emailField.getText(), passwordField.getText());
+            if(idToken==null){
+                emailField.setText("");
+                passwordField.setText("");
+            }
+            else{
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("explorepage-view.fxml"));
+                root = loader.load();
+                ExplorePageController epc = loader.getController();
+                epc.setInstance(fbase, stage);
+                scene = new Scene(root);
+                stage.setScene(scene);
+                stage.show();
+            }
+        } catch (IOException | FirebaseAuthException e) {
+            e.printStackTrace();
+        }
     }
 
 
     @FXML
     public void onSignUpHyperlinkClick(Event event) throws IOException {
-        Node node=(Node) event.getSource();
-        Stage stage=(Stage) node.getScene().getWindow();
-        Parent root = FXMLLoader.load(getClass().getResource("signup-view.fxml"));/* Exception */
-        Scene scene = new Scene(root);
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("signup-view.fxml"));
+        root = loader.load();
+        SignupController scc = loader.getController();
+        scc.setInstance(fbase, stage);
+        scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+    public void setInstance(Firebase fbase, Stage stage){
+        this.fbase=fbase;
+        this.stage=stage;
     }
 }
