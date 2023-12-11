@@ -8,7 +8,9 @@ module com.vidshare.vidshare {
     requires com.google.api.apicommon;
     requires com.google.auth;
     requires google.cloud.core;
-    //requires javafx.media;
+    requires google.cloud.storage;
+    requires javafx.media;
+    requires gax;
 
     opens com.vidshare.vidshare to javafx.fxml;
     exports com.vidshare.vidshare;

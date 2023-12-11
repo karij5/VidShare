@@ -15,10 +15,10 @@ public class Firebase {
 
     public Firebase() throws IOException {
         // Initialize Firebase
-        FileInputStream serviceAccount = new FileInputStream("src/main/resources/com/vidshare/vidshare/key.json");
+        FileInputStream serviceAccount = new FileInputStream("src/main/resources/com/vidshare/vidshare/fall23csc325sun-firebase.json");
         FirebaseOptions options = new FirebaseOptions.Builder()
+                .setStorageBucket("fall23csc325kevin-sun.appspot.com")
                 .setCredentials(GoogleCredentials.fromStream(serviceAccount))
-                .setDatabaseUrl("https://vidshare-496ed-default-rtdb.firebaseio.com")
                 .build();
         FirebaseApp.initializeApp(options);
         auth = FirebaseAuth.getInstance();
